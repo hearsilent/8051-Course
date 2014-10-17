@@ -23,3 +23,6 @@
 - 14.CLCD
 - 15.RF-Module
 - 16.SEEPROM
+
+## Example:
+- [zlargon/8051-ASM](https://github.com/zlargon/8051-ASM)
