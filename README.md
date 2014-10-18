@@ -89,12 +89,13 @@ The 32 opcodes 0x00–0x3F, plus the few opcodes not used in the above range, ar
    
 One of the reasons for the 8051's popularity is its range of operations on single bits. Bits are always specified by absolute addresses; there is no register-indirect or indexed addressing. Instructions that operate on single bits are:   
    
-SETB bit, CLR bit, CPL bit: Set, clear, or complement the specified bit   
-JB bit,offset: Jump if bit set   
-JNB bit,offset: Jump if bit clear   
-JBC bit,offset: Jump if bit set, and clear bit   
-MOV C,bit, MOV bit,C: Move the specified bit to the carry bit, or vice-versa   
-ORL C,bit, ORL C,/bit: OR the bit (or its complement) to the carry bit   
-ANL C,bit, ANL C,/bit: AND the bit (or its complement) to the carry bit   
-XRL C,bit, XRL C,/bit: Exclusive-OR the bit (or its complement) to the carry bit   
+- SETB bit, CLR bit, CPL bit: Set, clear, or complement the specified bit   
+- JB bit,offset: Jump if bit set   
+- JNB bit,offset: Jump if bit clear   
+- JBC bit,offset: Jump if bit set, and clear bit   
+- MOV C,bit, MOV bit,C: Move the specified bit to the carry bit, or vice-versa   
+- ORL C,bit, ORL C,/bit: OR the bit (or its complement) to the carry bit   
+- ANL C,bit, ANL C,/bit: AND the bit (or its complement) to the carry bit   
+- XRL C,bit, XRL C,/bit: Exclusive-OR the bit (or its complement) to the carry bit   
+
 Although most instructions require that one operand is the accumulator or an immediate constant, it is possible to perform a MOV directly between two internal RAM locations.   
