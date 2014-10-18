@@ -24,12 +24,28 @@
 - 15.RF-Module
 - 16.SEEPROM
 
+# Addressing Mode:
+- Immediate: MOV A,#20h
+- Register: MOV A,R0
+- Direct: MOV A,30h
+- Indirect: MOV A,@R0
+- External Data Indirect: MOVX A,@DPTR
+- Code Indirect: MOVC A,@A+DPTR 
+
+# Data Sheet:
+- [Atmel AT89S51](http://www.keil.com/dd/docs/datashts/atmel/at89s51_ds.pdf)
+    
+## Others:
+- [Pin Configurations](https://raw.githubusercontent.com/hearsilent/8051-asm/master/Pin_Configurations.gif)
+- [Special Function Register_Map](https://raw.githubusercontent.com/hearsilent/8051-asm/master/Special_Function_Register_Map.gif)
+- [Interrupt Vector Address](https://raw.githubusercontent.com/hearsilent/8051-asm/master/Interrupt_Vector_Address.gif)
+   
 ## Example:
 - [zlargon/8051-ASM](https://github.com/zlargon/8051-ASM)
 - [sjm126/8051](https://github.com/sjm126/8051)
 - [praveendath92/8051Codes](https://github.com/praveendath92/8051Codes)
 - [live5156go51/lab8051](https://github.com/live5156go51/lab8051)
-    
+      
 ## Registers:
 The only register on an 8051 that is not memory-mapped is the 16-bit program counter PC. This specifies the address of the next instruction to execute. Relative branch instructions supply an 8-bit signed offset which is added to the PC.   
    
