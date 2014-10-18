@@ -1,12 +1,12 @@
 8051 ASM
 ====================
 
-# Software:
+## Software:
 - [MIDE-51 Studio: IDE for MCS-51](http://www.opcube.com/software/midepack02518.exe) (Release 0.2.5.18)
 - [89S51-ISP Driver](https://www.dropbox.com/s/ad67lrqpj0yhbqh/Driver.rar?dl=1)
 - [ISP-Flash Programmer](https://www.dropbox.com/s/bnw50hy2odxwcvy/ISP-30a.zip?dl=1)
 
-# List:
+## List:
 - [1.AT89S51 Programmer](https://raw.githubusercontent.com/hearsilent/8051-asm/master/1.AT89S51%20Programmer.jpg)
 - [2.Flash LED](https://github.com/hearsilent/8051-asm/blob/master/2.Flash%20LED.asm)
 - [3.DIP Switch/Button](https://github.com/hearsilent/8051-asm/blob/master/3.DIP%20Switch_Button.asm)
@@ -24,7 +24,7 @@
 - 15.RF-Module
 - 16.SEEPROM
 
-# Addressing Mode:
+## Addressing Mode:
 - Immediate: MOV A,#20h
 - Register: MOV A,R0
 - Direct: MOV A,30h
@@ -32,21 +32,21 @@
 - External Data Indirect: MOVX A,@DPTR
 - Code Indirect: MOVC A,@A+DPTR 
 
-# Data Sheet:
+## Data Sheet:
 - [Atmel AT89S51](http://www.keil.com/dd/docs/datashts/atmel/at89s51_ds.pdf)
     
-# Others:
+## Others:
 - [Pin Configurations](https://raw.githubusercontent.com/hearsilent/8051-asm/master/Pin_Configurations.gif)
 - [Special Function Register_Map](https://raw.githubusercontent.com/hearsilent/8051-asm/master/Special_Function_Register_Map.gif)
 - [Interrupt Vector Address](https://raw.githubusercontent.com/hearsilent/8051-asm/master/Interrupt_Vector_Address.gif)
    
-# Example:
+## Example:
 - [zlargon/8051-ASM](https://github.com/zlargon/8051-ASM)
 - [sjm126/8051](https://github.com/sjm126/8051)
 - [praveendath92/8051Codes](https://github.com/praveendath92/8051Codes)
 - [live5156go51/lab8051](https://github.com/live5156go51/lab8051)
       
-# Registers:
+## Registers:
 The only register on an 8051 that is not memory-mapped is the 16-bit program counter PC. This specifies the address of the next instruction to execute. Relative branch instructions supply an 8-bit signed offset which is added to the PC.   
    
 The following registers are memory-mapped into the special function register space:   
@@ -71,7 +71,7 @@ In addition, there are 8 general purpose registers R0–R7, mapped to IRAM betwe
 
 Note that the PSW does not contain the common N (negative) and Z (zero) flags. Instead, because the accumulator is a bit-addressible SFR, it is possible to branch on individual bits of it, including the msbit. There is also an instruction to jump if the accumulator is zero or non-zero.   
    
-# Instruction set:
+## Instruction set:
 Instructions are all 1 to 3 bytes long, consisting of an initial opcode byte, followed by up to 2 bytes of operands.   
    
 There are 16 basic ALU instructions that operate between the accumulator and a second operand, specified using one of the following addressing modes:   
