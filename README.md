@@ -26,3 +26,6 @@
 
 ## Example:
 - [zlargon/8051-ASM](https://github.com/zlargon/8051-ASM)
+- [sjm126/8051](https://github.com/sjm126/8051)
+- [praveendath92/8051Codes](https://github.com/praveendath92/8051Codes)
+- [live5156go51/lab8051](https://github.com/live5156go51/lab8051)
