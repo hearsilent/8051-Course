@@ -12,7 +12,7 @@
 - [3.DIP Switch/Button](https://github.com/hearsilent/8051-asm/blob/master/3.DIP%20Switch_Button.asm)
 - [4.External Interrupt](https://github.com/hearsilent/8051-asm/blob/master/4.External%20Interrupt.asm)
 - [5.Counter](https://github.com/hearsilent/8051-asm/blob/master/5.Counter.asm)
-- [6.Timer](https://github.com/hearsilent/8051-asm/blob/master/6.Timer.asm)
+- [6.Timer](https://github.com/hearsilent/8051-asm/blob/master/6.Timer.asm), [7-Segment LED](https://github.com/hearsilent/8051-asm/blob/master/6.7-Segment%20LED.asm)
 - 7.UART
 - 8.Flash LED with SDCC
 - 9.Keypad
