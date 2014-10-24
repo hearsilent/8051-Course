@@ -12,17 +12,18 @@
 - [3.DIP Switch/Button](https://github.com/hearsilent/8051-asm/blob/master/3.DIP%20Switch_Button.asm)
 - [4.External Interrupt](https://github.com/hearsilent/8051-asm/blob/master/4.External%20Interrupt.asm)
 - [5.Counter](https://github.com/hearsilent/8051-asm/blob/master/5.Counter.asm)
-- [6.Timer](https://github.com/hearsilent/8051-asm/blob/master/6.Timer.asm), [7-Segment LED](https://github.com/hearsilent/8051-asm/blob/master/6.7-Segment%20LED.asm)
-- 7.UART
-- 8.Flash LED with SDCC
-- 9.Keypad
-- 10.DC Motor
-- 11.Stepper Motor
-- 12.ADC
-- 13.RS-232
-- 14.CLCD
-- 15.RF-Module
-- 16.SEEPROM
+- [6.Timer](https://github.com/hearsilent/8051-asm/blob/master/6.Timer.asm)
+- [7.7-Segment LED](https://github.com/hearsilent/8051-asm/blob/master/7.7-Segment%20LED.asm)
+- 8.UART
+- 9.Flash LED with SDCC
+- 10.Keypad
+- 11.DC Motor
+- 12.Stepper Motor
+- 13.ADC
+- 14.RS-232
+- 15.CLCD
+- 16.RF-Module
+- 17.SEEPROM
 
 ## Addressing Mode:
 - Immediate: MOV A,#20h
