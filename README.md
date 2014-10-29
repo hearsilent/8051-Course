@@ -3,6 +3,7 @@
 
 ## Software:
 - [MIDE-51 Studio: IDE for MCS-51](http://www.opcube.com/software/midepack02518.exe) (Release 0.2.5.18)
+- [MCU 8051 IDE](http://sourceforge.net/projects/mcu8051ide/)
 - [89S51-ISP Driver](https://www.dropbox.com/s/ad67lrqpj0yhbqh/Driver.rar?dl=1)
 - [ISP-Flash Programmer](https://www.dropbox.com/s/bnw50hy2odxwcvy/ISP-30a.zip?dl=1)
 
@@ -15,12 +16,12 @@
 - [6.Timer](https://github.com/hearsilent/8051-asm/blob/master/6.Timer.asm)
 - [7.7-Segment LED](https://github.com/hearsilent/8051-asm/blob/master/7.7-Segment%20LED.asm)
 - 8.UART
-- 9.Flash LED with SDCC
-- 10.Keypad
-- 11.DC Motor
-- 12.Stepper Motor
-- 13.ADC
-- 14.RS-232
+- 9.RS-232
+- 10.Flash LED with SDCC
+- 11Keypad
+- 12.DC Motor
+- 13.Stepper Motor
+- 14.ADC
 - 15.CLCD
 - 16.RF-Module
 - 17.SEEPROM
