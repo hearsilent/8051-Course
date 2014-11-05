@@ -15,7 +15,7 @@
 - [5.Counter](https://github.com/hearsilent/8051-asm/blob/master/5.Counter.asm)
 - [6.Timer](https://github.com/hearsilent/8051-asm/blob/master/6.Timer.asm)
 - [7.7-Segment LED](https://github.com/hearsilent/8051-asm/blob/master/7.7-Segment%20LED.asm)
-- 8.UART
+- [8.UART](https://github.com/hearsilent/8051-asm/blob/master/8.UART.asm)
 - 9.RS-232
 - 10.Flash LED with SDCC
 - 11Keypad
@@ -38,7 +38,6 @@
 - [Atmel AT89S51](http://www.keil.com/dd/docs/datashts/atmel/at89s51_ds.pdf)
     
 ## Others:
-- [Pin Configurations](https://raw.githubusercontent.com/hearsilent/8051-asm/master/Pin_Configurations.gif)
 - [Special Function Register Map](https://raw.githubusercontent.com/hearsilent/8051-asm/master/Special_Function_Register_Map.gif)
 - [Interrupt Vector Address](https://raw.githubusercontent.com/hearsilent/8051-asm/master/Interrupt_Vector_Address.gif)
    
@@ -47,7 +46,23 @@
 - [sjm126/8051](https://github.com/sjm126/8051)
 - [praveendath92/8051Codes](https://github.com/praveendath92/8051Codes)
 - [live5156go51/lab8051](https://github.com/live5156go51/lab8051)
-      
+
+## Pin Configurations:
+- [Pin Configurations](https://raw.githubusercontent.com/hearsilent/8051-asm/master/Pin_Configurations.gif)
+- Vcc, GND: supply voltage (5V), ground
+- XTAL1, XTAL2: crystal connections for system clock
+- RST: reset input
+- _EA_: External Access, _EA_=5V to enable internal ROM.
+- P0.0~P0.7: Port 0, bidirectional bit-addressable with open drain
+- P1.0~P1.7: Port 1, bidirectional bit-addressable with internal pullups
+- P2.0~P2.7: Port 2, bidirectional bit-addressable with internal pullups
+- P3.0~P3.7: Port 3, bidirectional bit-addressable with internal pullups
+- [Alternative Functions of Port 3](https://raw.githubusercontent.com/hearsilent/8051-asm/master/Alternative_Function_of_Port3.gif)
+- _PSEN_: Program Store Enable, read strobe for external program memory
+- ALE: Address Latch Enable, for multiplexing AD0~AD7
+- A8~A15(P2.0~P2.7): high-byte address bus for external addressing
+- AD0~AD7(P0.0~P0.7): multiplexed low-byte address bus and data bus for external addressing
+         
 ## Registers:
 The only register on an 8051 that is not memory-mapped is the 16-bit program counter PC. This specifies the address of the next instruction to execute. Relative branch instructions supply an 8-bit signed offset which is added to the PC.   
    
