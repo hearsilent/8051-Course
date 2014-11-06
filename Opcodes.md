@@ -34,7 +34,7 @@
 |1F|1|DEC|R7|Decrement Register|
 |20|3|JB|bit, offset|Jump if Bit Set|
 |21|2|AJMP|addr11|Absolute Jump Within 2K Block|
-|22|1|RET|Return From Subroutine|
+|22|1|RET| |Return From Subroutine|
 |23|1|RL|A|Rotate Accumulator Left|
 |24|2|ADD|A, #immed|Add Accumulator|
 |25|2|ADD|A, direct|Add Accumulator|
