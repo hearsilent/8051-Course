@@ -128,7 +128,7 @@ The 32 opcodes 0x00–0x3F, plus the few opcodes not used in the above range, ar
    
 One of the reasons for the 8051's popularity is its range of operations on single bits. Bits are always specified by absolute addresses; there is no register-indirect or indexed addressing. Instructions that operate on single bits are:   
    
-- __SETB__ bit, CLR bit, CPL bit: Set, clear, or complement the specified bit   
+- __SETB__ bit, __CLR__ bit, __CPL__ bit: Set, clear, or complement the specified bit   
 - __JB__ bit,offset: Jump if bit set   
 - __JNB__ bit,offset: Jump if bit clear   
 - __JBC__ bit,offset: Jump if bit set, and clear bit   
