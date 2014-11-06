@@ -1,6 +1,6 @@
 |Hex Code|Bytes|Mnemonic|Operands|Function|
 | ------------- |:-------------:|:-------------:|:-------------:|:-------------:|
-|00|1|NOP|None, waste time|
+|00|1|NOP| |None, waste time|
 |01|2|AJMP|addr11|Absolute Jump Within 2K Block|
 |02|3|LJMP|addr16|Long Jump|
 |03|1|RR|A|Rotate Accumulator Right|
@@ -50,7 +50,7 @@
 |2F|1|ADD|A, R7|Add Accumulator|
 |30|3|JNB|bit, offset|Jump if Bit Not Set|
 |31|2|ACALL|addr11|Absolute Call|
-|32|1|RETI|Return From Interrupt|
+|32|1|RETI| |Return From Interrupt|
 |33|1|RLC|A|Rotate Accumulator Left Through Carry|
 |34|2|ADDC|A, #immed|Add Accumulator (With Carry)|
 |35|2|ADDC|A, direct|Add Accumulator (With Carry)|
