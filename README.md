@@ -7,6 +7,8 @@
 - [89S51-ISP Driver](https://www.dropbox.com/s/ad67lrqpj0yhbqh/Driver.rar?dl=1)
 - [SP200SE Driver](https://www.dropbox.com/s/20z9g33r1dselbo/SP200SE.zip?dl=1)
 - [ISP-Flash Programmer](https://www.dropbox.com/s/bnw50hy2odxwcvy/ISP-30a.zip?dl=1)
+- [AccessPort (RS232 Serial Port)](http://www.sudt.com/download/AccessPort137.zip)
+- [Tera Term Pro (Terminal Emulator)](http://en.sourceforge.jp/frs/redir.php?m=iij&f=%2Fttssh2%2F61906%2Fteraterm-4.84.zip)
 
 ## List:
 - [1.AT89S51 Programmer](https://raw.githubusercontent.com/hearsilent/8051-asm/master/1.AT89S51%20Programmer.jpg)
@@ -42,6 +44,7 @@
 - [Special Function Register Map](https://raw.githubusercontent.com/hearsilent/8051-asm/master/Special_Function_Register_Map.gif)
 - [Interrupt Vector Address](https://raw.githubusercontent.com/hearsilent/8051-asm/master/Interrupt_Vector_Address.gif)
 - [RS232](https://raw.githubusercontent.com/hearsilent/8051-asm/master/RS232.gif)
+- [Baud Rate](https://raw.githubusercontent.com/hearsilent/8051-asm/master/Baud_Rate.gif)
    
 ## Example:
 - [zlargon/8051-ASM](https://github.com/zlargon/8051-ASM)
