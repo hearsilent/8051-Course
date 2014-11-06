@@ -45,6 +45,7 @@
 - [Interrupt Vector Address](https://raw.githubusercontent.com/hearsilent/8051-asm/master/Interrupt_Vector_Address.gif)
 - [RS232](https://raw.githubusercontent.com/hearsilent/8051-asm/master/RS232.gif)
 - [Baud Rate](https://raw.githubusercontent.com/hearsilent/8051-asm/master/Baud_Rate.gif)
+- [OPcodes](https://github.com/hearsilent/8051-asm/blob/master/Opcodes.md)
    
 ## Example:
 - [zlargon/8051-ASM](https://github.com/zlargon/8051-ASM)
