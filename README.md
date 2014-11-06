@@ -52,6 +52,10 @@
 - [sjm126/8051](https://github.com/sjm126/8051)
 - [praveendath92/8051Codes](https://github.com/praveendath92/8051Codes)
 - [live5156go51/lab8051](https://github.com/live5156go51/lab8051)
+- [aaboagye/microcontrollers](https://github.com/aaboagye/microcontrollers)
+
+## Sublime Text Highlight Syntax:
+- [8051 Assembly](https://github.com/aaboagye/microcontrollers/blob/master/misc/8051ASM.tmLanguage)
 
 ## Pin Configurations:
 - [Pin Configurations](https://raw.githubusercontent.com/hearsilent/8051-asm/master/Pin_Configurations.gif)
