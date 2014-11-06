@@ -105,22 +105,22 @@ Memory direct, specifying an IRAM or SFR location (opcodes x5, followed by 1 byt
 Immediate, specifying an 8-bit constant (opcodes x4, followed by 1 byte of data)   
 The instructions are as follows. Not all support all addressing modes; the immediate mode in particular is sometimes nonsensical:   
 
-- 0y INC operand: Increment the specified operand. Opcode 04 specifies "INC A"
-- 1y DEC operand: Decrement the specified operand. Opcode 14 specifies "DEC A"
-- 2y ADD A,operand: Add the operand to the accumulator A.
-- 3y ADDC A,operand: Add the operand, plus the C bit, to the accumulator.
-- 4y ORL A,operand: Logical OR the operand into the A register.
-- 5y ANL A,operand: Logical AND the operand into the A register.
-- 6y XRL A,operand: Logical exclusive-OR the operand into the A register.
-- 7y MOV operand,#data: Move immediate data to the operand. Opcode 74 specifies "MOV A,#data.
-- 8y MOV address,operand: Move data to an IRAM or SFR register.
-- 9y SUBB A,operand: Subtract the operand from the accumulator, with borrow. Note there is no subtract without borrow.
-- Ay MOV operand,address: Move data from an IRAM or SFR register. Opcodes A4 and A5 are not used.
-- By CJNE operand,#data,offset: Compare operand to the immediate data, and branch to PC+address if not equal. Opcodes B4 and B5 perform CJNE A,operand,offset, for memory direct and immediate operands. Note there is no "compare and jump if equal" instruction.
-- Cy XCH A,operand: Exchange (swap) the accumulator and the operand. Opcode C4 is not used.
-- Dy DJNZ operand,offset: Decrement the operand, and branch to PC+offset if the result is non-zero. Opcodes D4, D6, and D7 are not used.
-- Ey MOV A,operand: Move operand to the accumulator. Opcode E4 is not used. (Use opcode 74 instead.)
-- Fy MOV operand,A: Move accumulator to the operand. Opcode F4 is not used.
+- 0. __INC__ operand: Increment the specified operand. Opcode 04 specifies "INC A"
+- 1. __DEC__ operand: Decrement the specified operand. Opcode 14 specifies "DEC A"
+- 2. __ADD__ A,operand: Add the operand to the accumulator A.
+- 3. __ADDC__ A,operand: Add the operand, plus the C bit, to the accumulator.
+- 4. __ORL__ A,operand: Logical OR the operand into the A register.
+- 5. __ANL__ A,operand: Logical AND the operand into the A register.
+- 6. __XRL__ A,operand: Logical exclusive-OR the operand into the A register.
+- 7. __MOV__ operand,#data: Move immediate data to the operand. Opcode 74 specifies "MOV A,#data.
+- 8. __MOV__ address,operand: Move data to an IRAM or SFR register.
+- 9. __SUBB__ A,operand: Subtract the operand from the accumulator, with borrow. Note there is no subtract without borrow.
+- A. __MOV__ operand,address: Move data from an IRAM or SFR register. Opcodes A4 and A5 are not used.
+- B. __CJNE__ operand,#data,offset: Compare operand to the immediate data, and branch to PC+address if not equal. Opcodes B4 and B5 perform CJNE A,operand,offset, for memory direct and immediate operands. Note there is no "compare and jump if equal" instruction.
+- C. __XCH__ A,operand: Exchange (swap) the accumulator and the operand. Opcode C4 is not used.
+- D. __DJNZ__ operand,offset: Decrement the operand, and branch to PC+offset if the result is non-zero. Opcodes D4, D6, and D7 are not used.
+- E. __MOV__ A,operand: Move operand to the accumulator. Opcode E4 is not used. (Use opcode 74 instead.)
+- F. __MOV__ operand,A: Move accumulator to the operand. Opcode F4 is not used.
 
 Only the ADD, ADDC and SUBB instructions set PSW flags. The INC, DEC, and logical instructions do not. The CJNE instructions modify the C bit only, to the borrow that results from operand1−operand2.   
    
@@ -128,13 +128,13 @@ The 32 opcodes 0x00–0x3F, plus the few opcodes not used in the above range, ar
    
 One of the reasons for the 8051's popularity is its range of operations on single bits. Bits are always specified by absolute addresses; there is no register-indirect or indexed addressing. Instructions that operate on single bits are:   
    
-- SETB bit, CLR bit, CPL bit: Set, clear, or complement the specified bit   
-- JB bit,offset: Jump if bit set   
-- JNB bit,offset: Jump if bit clear   
-- JBC bit,offset: Jump if bit set, and clear bit   
-- MOV C,bit, MOV bit,C: Move the specified bit to the carry bit, or vice-versa   
-- ORL C,bit, ORL C,/bit: OR the bit (or its complement) to the carry bit   
-- ANL C,bit, ANL C,/bit: AND the bit (or its complement) to the carry bit   
-- XRL C,bit, XRL C,/bit: Exclusive-OR the bit (or its complement) to the carry bit   
+- __SETB__ bit, CLR bit, CPL bit: Set, clear, or complement the specified bit   
+- __JB__ bit,offset: Jump if bit set   
+- __JNB__ bit,offset: Jump if bit clear   
+- __JBC__ bit,offset: Jump if bit set, and clear bit   
+- __MOV__ C,bit, MOV bit,C: Move the specified bit to the carry bit, or vice-versa   
+- __ORL__ C,bit, ORL C,/bit: OR the bit (or its complement) to the carry bit   
+- __ANL__ C,bit, ANL C,/bit: AND the bit (or its complement) to the carry bit   
+- __XRL__ C,bit, XRL C,/bit: Exclusive-OR the bit (or its complement) to the carry bit   
 
 Although most instructions require that one operand is the accumulator or an immediate constant, it is possible to perform a MOV directly between two internal RAM locations.   
