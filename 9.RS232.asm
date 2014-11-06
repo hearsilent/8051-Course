@@ -1,0 +1,176 @@
+UART_BUSY	BIT	00h
+
+PROG		EQU	0000h
+		ORG	PROG+0000h
+		SJMP	START
+		;Interrupt Vector Table
+		ORG	PROG+0023h
+		LCALL	UART_ISR
+		RETI
+		ORG	PROG+0030h
+START:
+		CLR	UART_BUSY
+       		MOV     TMOD,#00100001b		; Timer1 in Mode 2, Timer0 in Mode 1
+        	MOV     TH1, #0F3h		; Baud Rate = 2400 bps at 12.000MHz
+        	MOV     SCON,#01010000b		; UART in Mode 1
+		SETB	ES			; Enable UART Interrupt
+		SETB	EA			; Enable Interrupt
+		SETB	TR1			; Start Timer 1
+
+		MOV	A,#'H'
+		CALL	UART_PUTC
+		MOV	A,#'e'
+		CALL	UART_PUTC
+		MOV	A,#'l'
+		CALL	UART_PUTC
+		MOV	A,#'l'
+		CALL	UART_PUTC
+		MOV	A,#'o'
+		CALL	UART_PUTC
+		MOV	A,#','
+		CALL	UART_PUTC
+		MOV	A,#' '
+		CALL	UART_PUTC
+		MOV	A,#'W'
+		CALL	UART_PUTC
+		MOV	A,#'e'
+		CALL	UART_PUTC
+		MOV	A,#' '
+		CALL	UART_PUTC
+		MOV	A,#'a'
+		CALL	UART_PUTC
+		MOV	A,#'r'
+		CALL	UART_PUTC
+		MOV	A,#'e'
+		CALL	UART_PUTC
+		MOV	A,#' '
+		CALL	UART_PUTC
+		MOV	A,#'N'
+		CALL	UART_PUTC
+		MOV	A,#'o'
+		CALL	UART_PUTC
+		MOV	A,#'.'
+		CALL	UART_PUTC
+		MOV	A,#'1'
+		CALL	UART_PUTC
+		MOV	A,#'2'
+		CALL	UART_PUTC
+		MOV	A,#'!'
+		CALL	UART_PUTC
+		MOV	A,#0Ah
+		CALL	UART_PUTC
+		MOV	P1,#255
+
+GoodMoring:	MOV	P1,#255
+		CJNE	A,#01H,AfterNoon
+		MOV	P1,#0
+		MOV	A,#'G'
+		CALL	UART_PUTC
+		MOV	A,#'o'
+		CALL	UART_PUTC
+		MOV	A,#'o'
+		CALL	UART_PUTC
+		MOV	A,#'d'
+		CALL	UART_PUTC
+		MOV	A,#' '
+		CALL	UART_PUTC
+		MOV	A,#'M'
+		CALL	UART_PUTC
+		MOV	A,#'o'
+		CALL	UART_PUTC
+		MOV	A,#'r'
+		CALL	UART_PUTC
+		MOV	A,#'i'
+		CALL	UART_PUTC
+		MOV	A,#'n'
+		CALL	UART_PUTC
+		MOV	A,#'g'
+		CALL	UART_PUTC
+		MOV	A,#'!'
+		CALL	UART_PUTC
+		MOV	A,#0Ah
+		CALL	UART_PUTC
+		MOV	A,#255
+		JMP	GoodMoring
+AfterNoon:	CJNE	A,#02H,GoodNight
+		MOV	P1,#0
+		MOV	A,#'G'
+		CALL	UART_PUTC
+		MOV	A,#'o'
+		CALL	UART_PUTC
+		MOV	A,#'o'
+		CALL	UART_PUTC
+		MOV	A,#'d'
+		CALL	UART_PUTC
+		MOV	A,#' '
+		CALL	UART_PUTC
+		MOV	A,#'A'
+		CALL	UART_PUTC
+		MOV	A,#'f'
+		CALL	UART_PUTC
+		MOV	A,#'t'
+		CALL	UART_PUTC
+		MOV	A,#'e'
+		CALL	UART_PUTC
+		MOV	A,#'r'
+		CALL	UART_PUTC
+		MOV	A,#'n'
+		CALL	UART_PUTC
+		MOV	A,#'o'
+		CALL	UART_PUTC
+		MOV	A,#'o'
+		CALL	UART_PUTC
+		MOV	A,#'n'
+		CALL	UART_PUTC
+		MOV	A,#'!'
+		CALL	UART_PUTC
+		MOV	A,#0Ah
+		CALL	UART_PUTC
+		MOV	A,#255
+		JMP	GoodMoring
+GoodNight:	CJNE	A,#03H,Finish
+		MOV	P1,#0
+		MOV	A,#'G'
+		CALL	UART_PUTC
+		MOV	A,#'o'
+		CALL	UART_PUTC
+		MOV	A,#'o'
+		CALL	UART_PUTC
+		MOV	A,#'d'
+		CALL	UART_PUTC
+		MOV	A,#' '
+		CALL	UART_PUTC
+		MOV	A,#'N'
+		CALL	UART_PUTC
+		MOV	A,#'i'
+		CALL	UART_PUTC
+		MOV	A,#'g'
+		CALL	UART_PUTC
+		MOV	A,#'h'
+		CALL	UART_PUTC
+		MOV	A,#'t'
+		CALL	UART_PUTC
+		MOV	A,#'!'
+		CALL	UART_PUTC
+		MOV	A,#0Ah
+		CALL	UART_PUTC
+		MOV	A,#255
+Finish:		JMP	GoodMoring
+
+UART_ISR:
+        	JB      RI,RECEIVED
+TRANSMITTED:
+		CLR	UART_BUSY
+        	CLR     TI
+        	RET
+RECEIVED:
+		MOV	A,SBUF
+		CLR     RI
+		RET
+
+UART_PUTC:
+		JB	UART_BUSY,UART_PUTC
+		SETB	UART_BUSY
+		MOV	SBUF,A
+		RET
+	        END
