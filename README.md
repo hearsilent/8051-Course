@@ -5,6 +5,7 @@
 - [MIDE-51 Studio: IDE for MCS-51](http://www.opcube.com/software/midepack02518.exe) (Release 0.2.5.18)
 - [MCU 8051 IDE](http://sourceforge.net/projects/mcu8051ide/)
 - [89S51-ISP Driver](https://www.dropbox.com/s/ad67lrqpj0yhbqh/Driver.rar?dl=1)
+- [SP200SE Driver](https://www.dropbox.com/s/20z9g33r1dselbo/SP200SE.zip?dl=1)
 - [ISP-Flash Programmer](https://www.dropbox.com/s/bnw50hy2odxwcvy/ISP-30a.zip?dl=1)
 
 ## List:
