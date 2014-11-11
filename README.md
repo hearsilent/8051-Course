@@ -144,5 +144,5 @@ One of the reasons for the 8051's popularity is its range of operations on singl
 Although most instructions require that one operand is the accumulator or an immediate constant, it is possible to perform a MOV directly between two internal RAM locations.   
 
 ## Keynote:
-- (Midterm Exam Keynote)[https://github.com/hearsilent/8051-asm/blob/master/Midterm%20Exam%20Keynote.md]
+- [Midterm Exam Keynote](https://github.com/hearsilent/8051-asm/blob/master/Midterm%20Exam%20Keynote.md)
 - Final Exam Keynote
