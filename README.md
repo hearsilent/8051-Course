@@ -1,4 +1,4 @@
-8051 ASM
+8051 Course
 ====================
 
 ## Software:
@@ -20,14 +20,15 @@
 - [7.7-Segment LED](https://github.com/hearsilent/8051-asm/blob/master/7.7-Segment%20LED.asm)
 - [8.UART](https://github.com/hearsilent/8051-asm/blob/master/8.UART.asm)
 - [9.RS-232](https://github.com/hearsilent/8051-asm/blob/master/9.RS232.asm)
-- 10.Flash LED with SDCC
-- 11Keypad
-- 12.DC Motor
-- 13.Stepper Motor
-- 14.ADC
-- 15.CLCD
-- 16.RF-Module
-- 17.SEEPROM
+- [10.SDCC](https://github.com/hearsilent/8051-asm/blob/master/10.SDCC.c)
+- 11.A formal report on a selected assignment
+- 12.Keypad
+- 13.DC Motor
+- 14.Stepper Motor
+- 15.ADC
+- 16.CLCD
+- 17.RF-Module
+- 18.SEEPROM
 
 ## Addressing Mode:
 - Immediate: MOV A,#20h
